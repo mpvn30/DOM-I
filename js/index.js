@@ -38,7 +38,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["logo"]);
+logo.src = 'img/logo.png'
 
 // Selectors
 
@@ -72,7 +72,7 @@ let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
 
 let ctaImage = document.getElementById("cta-img");
-ctaImage.setAttribute('src', siteContent["cta"]['img-src']);
+ctaImage.src = 'img/header-img.png'
 
 // Content
 
