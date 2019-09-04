@@ -6,7 +6,6 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -39,7 +38,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["logo"]);
 
 // Selectors
 
@@ -52,17 +51,17 @@ function add(element, value){
 // Navigation
 
 let nav = document.querySelector('nav');
-let addFirst = document.createElement('a');
-let addLast = document.createElement('a');
+let prependedNav = document.createElement('a')
+let appendedNav = document.createElement('a')
 
-nav.appendChild(addLast);
-nav.prepend(addFirst);
+nav.appendChild(appendedNav);
+nav.prepend(prependedNav);
 
-let item = document.querySelectorAll('nav a');
-let values = Object.values(siteContent['nav']);
+let nElements = document.querySelectorAll('nav a');
+let nValues = Object.values(siteContent['nav']);
 
-add(item, values);
-item.forEach((item) => item.style.color = "#green");
+add(nElements, nValues);
+nElements.forEach((e) => e.style.color = "green")
 
 // CTA 
 
